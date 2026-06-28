@@ -258,7 +258,36 @@ section{padding:5rem clamp(1.5rem,8vw,5rem)}
   font-size:.65rem;font-weight:800;border-radius:4px;
   padding:.2rem .5rem;letter-spacing:.06em;text-transform:uppercase;
 }
-
+/* ── SKILL ICON CARDS ─────────────────────────────────────────── */
+.skill-icon-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(82px,1fr));
+  gap:.75rem;margin-top:.6rem;
+}
+.skill-icon-card{
+  background:rgba(255,255,255,.04);border:1px solid var(--border);
+  border-radius:10px;padding:.85rem .5rem .65rem;
+  display:flex;flex-direction:column;align-items:center;gap:.45rem;
+  transition:border-color .2s,background .2s,transform .15s;
+  cursor:default;
+}
+.skill-icon-card:hover{
+  border-color:rgba(0,201,167,.35);background:var(--tealfade);
+  transform:translateY(-3px);
+}
+.skill-icon-card i{font-size:1.75rem;line-height:1}
+.skill-icon-card .si-label{
+  font-size:.68rem;font-weight:600;color:var(--slate);
+  text-align:center;line-height:1.3;letter-spacing:.01em;
+}
+/* health/custom icons use FA */
+.skill-icon-card .fa-icon{font-size:1.6rem;color:var(--teal)}
+/* plain text fallback icon */
+.skill-icon-card .txt-icon{
+  font-size:.8rem;font-weight:900;color:var(--teal);
+  background:var(--tealfade);border-radius:6px;
+  padding:.3rem .5rem;letter-spacing:.03em;line-height:1;
+}
 /* ── ABOUT / SKILLS ───────────────────────────────────────────────── */
 #about{
   display:grid;grid-template-columns:1fr 1fr;gap:5rem;
@@ -279,6 +308,7 @@ section{padding:5rem clamp(1.5rem,8vw,5rem)}
   font-weight:500;transition:border-color .15s,background .15s;
 }
 .skill-tag:hover{border-color:rgba(0,201,167,.4);background:var(--tealfade)}
+
 
 /* ── EXPERIENCE / TIMELINE ────────────────────────────────────────── */
 #experience{background:var(--navy2)}
